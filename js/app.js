@@ -1,10 +1,6 @@
 // create HTML Tab
 var titre = document.getElementsByTagName('h1')[0];
-
-
 var bodyA = document.getElementsByTagName('body')[0];
-
-
 var tableA = document.createElement("table");
 
 var matrixTable = [];
@@ -41,14 +37,20 @@ for (var i = 0; i < 7; i++) {
     tdBi = tdB[i];
     tdBi.classList.add('tableB');
     tdBi.id = i;
-    tdBi.addEventListener('click', function(){
-      console.log(this.id);
-    })
+    tdBi.addEventListener('click',function() {
+        matrixTable[5][i] = "1";
+        console.log(matrixTable);
+    }
+    )
+
     trB.appendChild(tdBi);
 }
 tableB.appendChild(trB);
 bodyA.prepend(tableB);
-console.log(matrixTable);
 
 unTd = document.getElementsByClassName('tableA');
 console.log(unTd);
+
+// function addJetons(id) {
+//     matrixTable[5] = "1";
+// }
