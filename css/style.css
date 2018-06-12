@@ -3,9 +3,10 @@ body {
 }
 
 td {
-    width: 5em;
-    height: 5em;
+    width: 2em;
+    height: 2em;
     border: 2px solid black;
+    border-radius: 50%;
 }
 
 table {
