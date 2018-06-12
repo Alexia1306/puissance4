@@ -2,6 +2,7 @@
 var titre = document.getElementsByTagName('h1')[0];
 var bodyA = document.getElementsByTagName('body')[0];
 var tableA = document.createElement("table");
+var joueur = 1;
 
 
 var trA = [];
@@ -30,12 +31,11 @@ for (var i = 0; i < 7; i++) {
     tdBi.classList.add('tableB');
     tdBi.id = i;
     tdBi.addEventListener('click', function() {
-    var joueur = 1;
         if (joueur == 1) {
-            color = "blue";
+          color = "blue";
             joueur = 2;
         } else if (joueur ==2) {
-            color = "red";
+          color = "red";
             joueur = 1;
         }
         for (var i = 5; i >= 0; i--) {
