@@ -1,8 +1,10 @@
 // create HTML Tab
-var titre = document.getElementsByTagName('h1')[0];
-var bodyA = document.getElementsByTagName('body')[0];
+
+var mainElmt = document.getElementsByTagName('main')[0];
 var tableA = document.createElement("table");
 var joueur = 1;
+var title = document.createElement("h1");
+title.innerHTML = "puissance 4";
 
 
 var trA = [];
@@ -20,7 +22,7 @@ for (var j = 0; j < 6; j++) {
     tableA.appendChild(trAj);
 }
 
-bodyA.prepend(tableA);
+mainElmt.prepend(tableA);
 
 var tableB = document.createElement("table");
 var trB = document.createElement("tr");
@@ -52,6 +54,7 @@ for (var i = 0; i < 7; i++) {
     trB.appendChild(tdBi);
 }
 tableB.appendChild(trB);
-bodyA.prepend(tableB);
+mainElmt.prepend(tableB);
+mainElmt.prepend(title);
 
 console.log(trA[5][1]);
