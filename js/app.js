@@ -29,21 +29,25 @@ for (var i = 0; i < 7; i++) {
     tdBi = tdB[i];
     tdBi.classList.add('tableB');
     tdBi.id = i;
-    tdBi.addEventListener('click',function() {
-      if (trA[5][this.id].style.backgroundColor == "grey") {
-        trA[5][this.id].style.backgroundColor = "blue";
-      } else if (trA[4][this.id].style.backgroundColor == "grey"){
-        trA[4][this.id].style.backgroundColor = "blue";
-      } else if (trA[3][this.id].style.backgroundColor == "grey"){
-        trA[3][this.id].style.backgroundColor = "blue";
-      } else if (trA[2][this.id].style.backgroundColor == "grey"){
-        trA[2][this.id].style.backgroundColor = "blue";
-      } else if (trA[1][this.id].style.backgroundColor == "grey"){
-        trA[1][this.id].style.backgroundColor = "blue";
-      } else {
-        trA[0][this.id].style.backgroundColor = "blue";
-      }
+    tdBi.addEventListener('click', function() {
+    var joueur = 1;
+        if (joueur == 1) {
+            color = "blue";
+            joueur = 2;
+        } else if (joueur ==2) {
+            color = "red";
+            joueur = 1;
+        }
+        for (var i = 5; i >= 0; i--) {
+
+            if (trA[i][this.id].style.backgroundColor == "grey") {
+                trA[i][this.id].style.backgroundColor = color;
+                break;
+            }
+        }
+        console.log(joueur);
     });
+
 
     trB.appendChild(tdBi);
 }
