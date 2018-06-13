@@ -1,9 +1,21 @@
 body {
     background-color: lightgrey;
+    perspective: 25em;
 }
 main {
-    padding-top: 1em;
+  padding-top: 10%;
 }
+main.player_1 {
+  transform: rotateY(-30deg);
+  animation-duration: 1s;
+  animation-name: rotate1;
+}
+main.player_2 {
+  animation-duration: 1s;
+  transform: rotateY(30deg);
+  animation-name: rotate2;
+}
+
 td {
     width: 2em;
     height: 2em;
@@ -20,4 +32,22 @@ table {
 
 h1 {
     text-align: center;
+}
+
+@keyframes rotate1 {
+  from {
+    transform: rotateY(30deg);
+  }
+  to {
+    transform: rotateY(-30deg);
+  }
+}
+
+@keyframes rotate2 {
+  from {
+    transform: rotateY(-30deg);
+  }
+  to {
+    transform: rotateY(30deg);
+  }
 }
